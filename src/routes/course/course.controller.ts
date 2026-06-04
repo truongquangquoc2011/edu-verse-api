@@ -21,7 +21,7 @@ import {
   PublicCourseListResDTO,
 } from './dto/course.dto'
 import { CreateCourseResType, UpdateCourseResType } from './course.model'
-import { RequireAdminRole, RequireSellerRole } from 'src/shared/decorator/role.decorator'
+import { RequireAdminRole, RequireSellerRole } from '../../shared/decorator/role.decorator'
 import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
 import { Auth } from 'src/shared/decorator/auth.decorator'
 import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
