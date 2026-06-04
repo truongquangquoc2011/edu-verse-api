@@ -1,6 +1,6 @@
 import { CourseStatus } from '@prisma/client'
 import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { PaginationQuerySchema, PaginationResBaseSchema } from 'src/shared/models/pagination.model'
+import { PaginationQuerySchema, PaginationResBaseSchema } from '../../shared/models/pagination.model'
 import { z } from 'zod'
 
 const COURSE_ERR = ERROR_MESSAGE.VALIDATION.COURSE
