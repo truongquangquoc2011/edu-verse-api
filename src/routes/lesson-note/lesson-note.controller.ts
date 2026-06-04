@@ -24,13 +24,13 @@ import {
   UpdateLessonNoteDTO,
 } from './dto/lesson-note.dto'
 
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
+import { MessageResDTO } from '../../shared/dto/response.dto'
 import { LessonNoteService } from './lesson-note.service'
 
 @ApiTags('Lesson Note')

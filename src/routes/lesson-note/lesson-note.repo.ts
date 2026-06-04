@@ -1,8 +1,8 @@
 import { BadRequestException, Injectable } from '@nestjs/common'
 import { Prisma } from '@prisma/client'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { ValidationService } from 'src/shared/services/validation.service'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { ValidationService } from '../../shared/services/validation.service'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 import {
   CreateLessonNoteType,
   LessonNoteResType,
@@ -10,7 +10,7 @@ import {
   PinLessonNoteType,
   UpdateLessonNoteType,
 } from './lesson-note.model'
-import { DuplicateLessonNoteTimestampException } from 'src/shared/constants/lesson-note-error.constant'
+import { DuplicateLessonNoteTimestampException } from '../../shared/constants/lesson-note-error.constant'
 
 @Injectable()
 export class LessonNoteRepository {

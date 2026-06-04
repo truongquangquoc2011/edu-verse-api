@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { PaginationQuerySchema, PaginationResBaseSchema } from 'src/shared/models/pagination.model'
+import { PaginationQuerySchema, PaginationResBaseSchema } from '../../shared/models/pagination.model'
 
 /**
  * Schema for creating a new lesson note.

@@ -7,7 +7,7 @@ import {
   ListLessonNotesResType,
   LessonNoteResType,
 } from './lesson-note.model'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 
 @Injectable()
 export class LessonNoteService {
