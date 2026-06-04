@@ -1,16 +1,16 @@
 import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common'
-import { UserType } from 'src/shared/models/shared-user.model'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { UserType } from '../../shared/models/shared-user.model'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { ProfileResType, RefreshTokenType, RoleType, VerificationCodeType } from './auth.model'
 import {
   TypeVerifycationCodeType,
   UserStatus,
   UserStatusType,
   userWithRoleSelect,
-} from 'src/shared/constants/auth.constant'
+} from '../../shared/constants/auth.constant'
 import { DeviceType, UpdateUserProfileDTO } from './dto/auth.dto'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { UserWithRoleAndPermissions } from 'src/shared/@types/auth.type'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
+import { UserWithRoleAndPermissions } from '../../shared/@types/auth.type'
 import { ActionTaken, Prisma, ViolationType } from '@prisma/client'
 import { UserNotFoundException } from './auth.error'
 

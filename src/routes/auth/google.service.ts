@@ -1,13 +1,13 @@
 import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common'
 import { google } from 'googleapis'
-import { envConfig } from 'src/shared/config'
+import { envConfig } from '../../shared/config'
 import { AuthStateType } from './auth.model'
 import { AuthService } from './auth.service'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { DEFAULT_OAUTH_VALUES, GOOGLE_OAUTH_VERSION, GOOGLE_PROMPTS } from 'src/shared/constants/oauth.constant'
-import { parseOAuthState } from 'src/shared/helper/oauth.helper'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { GoogleCallbackParams, TokenResponse } from 'src/shared/constants/google.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
+import { DEFAULT_OAUTH_VALUES, GOOGLE_OAUTH_VERSION, GOOGLE_PROMPTS } from '../../shared/constants/oauth.constant'
+import { parseOAuthState } from '../../shared/helper/oauth.helper'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { GoogleCallbackParams, TokenResponse } from '../../shared/constants/google.constant'
 
 @Injectable()
 export class GoogleService {

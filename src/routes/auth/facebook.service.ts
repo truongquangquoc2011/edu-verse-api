@@ -1,10 +1,10 @@
 import { Injectable, BadRequestException, InternalServerErrorException } from '@nestjs/common'
-import { envConfig } from 'src/shared/config'
+import { envConfig } from '../../shared/config'
 import { AuthService } from './auth.service'
 import { AuthStateType } from './auth.model'
-import { API_URLS, DEFAULT_OAUTH_VALUES, FACEBOOK_FIELDS, OAUTH_SCOPES } from 'src/shared/constants/oauth.constant'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { parseOAuthState } from 'src/shared/helper/oauth.helper'
+import { API_URLS, DEFAULT_OAUTH_VALUES, FACEBOOK_FIELDS, OAUTH_SCOPES } from '../../shared/constants/oauth.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
+import { parseOAuthState } from '../../shared/helper/oauth.helper'
 import axios from 'axios'
 
 interface FacebookUser {

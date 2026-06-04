@@ -1,7 +1,7 @@
-import { TypeVerifycationCode } from 'src/shared/constants/auth.constant'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
+import { TypeVerifycationCode } from '../../shared/constants/auth.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
 import { ActionTaken, ViolationType } from '../../shared/constants/user.constant'
-import { coerceUntil } from 'src/shared/helper'
+import { coerceUntil } from '../../shared/helper'
 import { z } from 'zod'
 import { UserSchema } from '../../shared/models/shared-user.model'
 

@@ -24,7 +24,7 @@ import {
   RegisterResSchema,
   SendOTPBodySchema,
 } from '../auth.model'
-import { MessageResSchema } from 'src/shared/models/response.model'
+import { MessageResSchema } from '../../../shared/models/response.model'
 
 export class RegisterBodyDTO extends createZodDto(RegisterBodySchema) {}
 

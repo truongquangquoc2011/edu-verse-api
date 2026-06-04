@@ -8,8 +8,8 @@ import {
   UnauthorizedException,
   UnprocessableEntityException,
 } from '@nestjs/common'
-import { HashingService } from 'src/shared/services/hashing.service'
-import { TokenService } from 'src/shared/services/token.service'
+import { HashingService } from '../../shared/services/hashing.service'
+import { TokenService } from '../../shared/services/token.service'
 import { generateOTP, isNotFoundPrismaError, isUniqueConstraintPrismaError } from '../../shared/helper'
 import { RolesService } from './role.service'
 import {
@@ -30,14 +30,14 @@ import {
   UserLockResType,
 } from './auth.model'
 import { AuthRepository } from './auth.repo'
-import { SharedUserRepository } from 'src/shared/repositories/shared-user.repo'
+import { SharedUserRepository } from '../../shared/repositories/shared-user.repo'
 import { addMilliseconds } from 'date-fns'
 import ms from 'ms'
-import { envConfig } from 'src/shared/config'
-import { TypeVerifycationCode, TypeVerifycationCodeType, UserStatus } from 'src/shared/constants/auth.constant'
-import { EmailService } from 'src/shared/services/email.service'
-import { AccessTokenDto } from 'src/shared/dto/jwt.dto'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { envConfig } from '../../shared/config'
+import { TypeVerifycationCode, TypeVerifycationCodeType, UserStatus } from '../../shared/constants/auth.constant'
+import { EmailService } from '../../shared/services/email.service'
+import { AccessTokenDto } from '../../shared/dto/jwt.dto'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { v4 as uuidv4 } from 'uuid'
 import {
   EmailNotExistsException,
@@ -53,10 +53,10 @@ import {
   UserBlockedException,
   UserNotFoundException,
 } from './auth.error'
-import { AuthMessages } from 'src/shared/constants/message.constant'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { ActionTaken } from 'src/shared/constants/user.constant'
-import { MESSAGES } from 'src/shared/constants/succes-message.constant'
+import { AuthMessages } from '../../shared/constants/message.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
+import { ActionTaken } from '../../shared/constants/user.constant'
+import { MESSAGES } from '../../shared/constants/succes-message.constant'
 
 @Injectable()
 export class AuthService {
