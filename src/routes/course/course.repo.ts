@@ -34,7 +34,7 @@ import { ValidationService } from 'src/shared/services/validation.service'
 import { CourseBasicInfo } from 'src/shared/@types/course.type'
 import { COURSE_BASIC_SELECT } from 'src/shared/constants/constants'
 import { COURSE_DETAIL_SELECT, COURSE_PUBLIC_DETAIL_SELECT } from 'src/shared/constants/course-field.constant'
-import { toNumber } from 'src/shared/utils/decimal.util'
+import { toNumber } from '../../shared/utils/decimal.util'
 import { CourseNotFoundOrForbiddenException } from 'src/shared/constants/course-error.constant'
 const idSelect = { id: true }
 @Injectable()
