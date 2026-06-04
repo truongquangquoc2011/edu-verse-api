@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common'
 import { HashingService } from 'src/shared/services/hashing.service'
 import { TokenService } from 'src/shared/services/token.service'
-import { generateOTP, isNotFoundPrismaError, isUniqueConstraintPrismaError } from 'src/shared/helper'
+import { generateOTP, isNotFoundPrismaError, isUniqueConstraintPrismaError } from '../../shared/helper'
 import { RolesService } from './role.service'
 import {
   LoginBodyType,
