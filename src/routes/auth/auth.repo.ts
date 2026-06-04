@@ -1,5 +1,5 @@
 import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common'
-import { UserType } from 'src/shared/models/shared-user.model.'
+import { UserType } from 'src/shared/models/shared-user.model'
 import { PrismaService } from 'src/shared/services/prisma.service'
 import { ProfileResType, RefreshTokenType, RoleType, VerificationCodeType } from './auth.model'
 import {
