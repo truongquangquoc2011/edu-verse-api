@@ -456,6 +456,38 @@ export const RESPONSE_MESSAGES = {
       description: 'The PDF file was uploaded to the lesson successfully',
     },
   },
+  LESSON_NOTE: {
+    CREATED: {
+      statusCode: HttpStatusCode.CREATED,
+      message: 'Lesson note created successfully',
+      description: 'The lesson note was created successfully',
+    },
+    LIST: {
+      statusCode: HttpStatusCode.OK,
+      message: 'Lesson notes fetched successfully',
+      description: 'A list of lesson notes was retrieved successfully',
+    },
+    DETAIL: {
+      statusCode: HttpStatusCode.OK,
+      message: 'Lesson note fetched successfully',
+      description: 'The lesson note details were retrieved successfully',
+    },
+    UPDATED: {
+      statusCode: HttpStatusCode.OK,
+      message: 'Lesson note updated successfully',
+      description: 'The lesson note was updated successfully',
+    },
+    PINNED: {
+      statusCode: HttpStatusCode.OK,
+      message: 'Lesson note pin status updated',
+      description: 'The lesson note pinned status was updated successfully',
+    },
+    DELETED: {
+      statusCode: HttpStatusCode.OK,
+      message: 'Lesson note deleted successfully',
+      description: 'The lesson note was deleted successfully',
+    },
+  },
   HASHTAG: {
     CREATED: {
       statusCode: HttpStatusCode.CREATED,

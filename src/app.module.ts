@@ -32,6 +32,7 @@ import { OrderModule } from './routes/order/order.module'
 import { SearchModule } from './routes/search/search.module'
 import { QaModule } from './routes/qa/qa.module'
 import { ChatbotModule } from './routes/chatbot/chatbot.module'
+import { LessonNoteModule } from './routes/lesson-note/lesson-note.module'
 
 const TIME_THROTTLER = 60
 const LIMIT_THROTTLER = 20
@@ -72,6 +73,7 @@ const LIMIT_THROTTLER = 20
     SearchModule,
     QaModule,
     ChatbotModule,
+    LessonNoteModule,
   ],
   controllers: [],
   providers: [

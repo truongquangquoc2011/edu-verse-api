@@ -176,6 +176,10 @@ model User {
   qaPosts               QaPost[]       @relation("QaPostAuthor")
   qaReactions           QaReaction[]   @relation("QaReactionByUser")
   qaThreadReads         QaThreadRead[]
+  
+  userLessonNotes         LessonNote[] @relation("userLessonNote")
+  createLessonNoteByUser  LessonNote[] @relation("createLessonNoteByUser")
+  updateLessonNoteByUser  LessonNote[] @relation("updateLessonNoteByUser")
 
   deletedAt  DateTime?
   createdAt  DateTime     @default(now())
@@ -387,6 +391,7 @@ model Course {
   cart               Cart[]            @relation("CourseCart")
   feedback           Feedback[]        @relation("courseFeedback")
   qaThreads          QaThread[]
+  lessonNotes        LessonNote[]
   recommendedInMessages MessageCourseRecommendation[]
 
   @@index([createdAt])
@@ -439,6 +444,7 @@ model Lesson {
   lessonCompletions LessonCompletion[]
   quizzes           Quizz[]
   qaThreads         QaThread[]
+  lessonNotes       LessonNote[]
 
   @@unique([chapterId, title])
   @@index([createdAt])
@@ -1700,6 +1706,40 @@ model QaThreadRead {
   @@index([userId, lastReadAt])
 }
 
+model LessonNote {
+  id           Int      @id @default(autoincrement())
+
+  user         User     @relation("userLessonNote", fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  userId       Int
+
+  course       Course   @relation(fields: [courseId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  courseId     Int
+
+  lesson       Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  lessonId     Int
+
+  content      String
+  timestampSec Int
+  isPinned     Boolean  @default(false)
+
+  isDelete     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  createdBy    User?    @relation("createLessonNoteByUser", fields: [createdById], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  createdById  Int?
+  updatedAt    DateTime @updatedAt
+  updatedBy    User?    @relation("updateLessonNoteByUser", fields: [updatedById], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  updatedById  Int?
+  deletedAt    DateTime?
+
+  @@index([createdAt])
+  @@index([userId])
+  @@index([lessonId])
+  @@index([courseId])
+  @@index([userId, lessonId])
+  @@index([userId, courseId])
+  @@index([userId, lessonId, timestampSec])
+  @@index([userId, isPinned])
+}
 enum QaStatus {
   PENDING
   UNREAD
