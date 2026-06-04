@@ -20,10 +20,12 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@modules/*": ["src/modules/*"],
-      "@configs/*": ["src/configs/*"],
-      "@repositories/*": ["src/repositories/*"]
-    }
+  "src/*": ["src/*"],
+  "emails/*": ["emails/*"],
+  "@modules/*": ["src/modules/*"],
+  "@configs/*": ["src/configs/*"],
+  "@repositories/*": ["src/repositories/*"]
+}
   },
   "include": ["src/**/*", "emails/**/*"],
   "ts-node": {
