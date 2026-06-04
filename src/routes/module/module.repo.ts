@@ -1,10 +1,10 @@
 import { BadRequestException, Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { MODULE_MESSAGES } from 'src/shared/constants/module-message.constant'
-import { ValidationService } from 'src/shared/services/validation.service'
-import { MODULE_PUBLIC_SELECT } from 'src/shared/constants/module.select'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
+import { MODULE_MESSAGES } from '../../shared/constants/module-message.constant'
+import { ValidationService } from '../../shared/services/validation.service'
+import { MODULE_PUBLIC_SELECT } from '../../shared/constants/module.select'
 import {
   CreateModuleResType,
   CreateModuleType,
@@ -19,17 +19,17 @@ import {
   ModuleQuizItemType,
   ModuleQuizResultType,
 } from './module.model'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 import { Prisma, QuizStatus } from '@prisma/client'
 import {
   DuplicateTitlesException,
   ModuleNotFoundOrForbiddenException,
-} from 'src/shared/constants/module-error.constant'
+} from '../../shared/constants/module-error.constant'
 import {
   buildCompletedLessonCountMapByModules,
   buildLessonCountMapByModules,
   mapModuleToStudyItem,
-} from 'src/shared/helper/module.helper'
+} from '../../shared/helper/module.helper'
 
 @Injectable()
 export class ModuleRepository {

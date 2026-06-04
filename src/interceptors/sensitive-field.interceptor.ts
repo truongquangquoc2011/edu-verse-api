@@ -1,7 +1,7 @@
 import { CallHandler, ExecutionContext, Injectable, Logger, NestInterceptor } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { map, Observable } from 'rxjs'
-import { FieldPolicy, SanitizedUser, SanitizeOptions, UserRole } from 'src/shared/constants/role.constant'
+import { FieldPolicy, SanitizedUser, SanitizeOptions, UserRole } from '../shared/constants/role.constant'
 
 @Injectable()
 export class SensitiveFieldInterceptor implements NestInterceptor {

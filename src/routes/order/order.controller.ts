@@ -9,18 +9,18 @@ import {
   Res,
 } from '@nestjs/common'
 import { ApiTags, ApiOperation, ApiBody } from '@nestjs/swagger'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
 import { Response } from 'express'
 
 import { OrderService } from './order.service'
 import { BuyNowDTO, CheckoutCartDTO, MomoIpnDTO, PaymentInitResDTO, MomoReturnDTO } from './dto/order.dto'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { envConfig } from 'src/shared/config'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { envConfig } from '../../shared/config'
 
 @ApiTags('Order')
 @Controller('orders')

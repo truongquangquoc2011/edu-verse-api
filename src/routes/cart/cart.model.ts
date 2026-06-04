@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { PaginationQuerySchema, PaginationResBaseSchema } from 'src/shared/models/pagination.model'
+import { PaginationQuerySchema, PaginationResBaseSchema } from '../../shared/models/pagination.model'
 
 // ==================== CONSTANTS ====================
 export const CART_MAX_ITEMS = 50

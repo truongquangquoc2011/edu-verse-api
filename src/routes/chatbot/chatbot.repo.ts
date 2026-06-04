@@ -1,5 +1,5 @@
 import { Injectable, ForbiddenException } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { CourseStatus, ConversationType, ParticipantRole, MessageType, Prisma } from '@prisma/client'
 
 @Injectable()

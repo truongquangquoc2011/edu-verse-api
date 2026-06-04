@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 
 import { ChatbotController } from './chatbot.controller'
 import { ChatbotRepository } from './chatbot.repo'

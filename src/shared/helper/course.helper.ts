@@ -1,7 +1,7 @@
 import { BadRequestException } from '@nestjs/common'
 import { CourseStatus, Prisma, PrismaClient } from '@prisma/client'
-import { CreateCourseType, UpdateCourseType } from 'src/routes/course/course.model'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
+import { CreateCourseType, UpdateCourseType } from '../../routes/course/course.model'
+import { ERROR_MESSAGE } from '../constants/error-message.constant'
 import {
   CourseAlreadyDeletedException,
   CourseCannotDeleteApprovedException,

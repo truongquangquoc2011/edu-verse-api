@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
 import { CreateFeedbackBodyType, FeedbackResponseType, GetAdminFeedbackQueryType } from './feedback.model'
 import { FeedbackNotFoundException } from './feedback.error'
-import { FeedbackStatus, FeedbackType } from 'src/shared/constants/feedback.constant'
+import { FeedbackStatus, FeedbackType } from '../../shared/constants/feedback.constant'
 import { Prisma } from '@prisma/client'
 
 export const FEEDBACK_DEFAULT_SELECT = {

@@ -1,5 +1,5 @@
 import { BadRequestException, ForbiddenException, Injectable, NotFoundException } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import {
   ConversationResponseType,
   CreateConversationBodyType,
@@ -7,7 +7,7 @@ import {
   SendMessageBodyType,
   UpdateConversationBodyType,
 } from './conversation.model'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
 import {
   ConversationNotFoundException,
   MessageNotFoundException,
@@ -15,7 +15,7 @@ import {
   UserNotInConversationException,
 } from './conversation.error'
 import { ConversationType, MessageType, ParticipantRole, Prisma } from '@prisma/client'
-import { JoinRequestStatus } from 'src/shared/constants/conversation.constant'
+import { JoinRequestStatus } from '../../shared/constants/conversation.constant'
 
 const LIST_MESSAGES_SKIP = 0
 const LIST_MESSAGES_TAKE = 20

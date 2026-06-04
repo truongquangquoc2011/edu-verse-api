@@ -3,14 +3,14 @@ import { ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger'
 import { ZodSerializerDto } from 'nestjs-zod'
 
 import { LessonService } from './lesson.service'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 
 import { ListLessonsStudyQueryDTO, ListLessonsStudyResDTO, LessonStudyDetailDTO } from './dto/lesson.dto'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 import { ListLessonQuizQueryDTO, ListLessonQuizResDTO } from './dto/lesson.dto'
 @ApiTags('Lesson - Study')
 @Controller('study')

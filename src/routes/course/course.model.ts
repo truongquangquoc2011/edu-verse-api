@@ -1,5 +1,5 @@
 import { CourseStatus } from '@prisma/client'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
 import { PaginationQuerySchema, PaginationResBaseSchema } from '../../shared/models/pagination.model'
 import { z } from 'zod'
 

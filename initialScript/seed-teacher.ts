@@ -1,9 +1,9 @@
 // initialScript/seed-teacher.ts
 import { Logger } from '@nestjs/common'
-import { envConfig } from 'src/shared/config'
-import { RoleName } from 'src/shared/constants/role.constant'
-import { HashingService } from 'src/shared/services/hashing.service'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { envConfig } from '../src/shared/config'
+import { RoleName } from '../src/shared/constants/role.constant'
+import { HashingService } from '../src/shared/services/hashing.service'
+import { PrismaService } from '../src/shared/services/prisma.service'
 import type { Teacher } from '@prisma/client' // để khai báo kiểu cho results
 
 const predefinedTeachers = [

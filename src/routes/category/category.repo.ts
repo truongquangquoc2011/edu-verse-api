@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { CreateCategoryBodyType, CategoryResponseType, UpdateCategoryBodyType } from './category.model'
 import { CategoryNotFoundException } from './category.error'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
 export const CATEGORY_DEFAULT_SELECT = {
   id: true,
   name: true,

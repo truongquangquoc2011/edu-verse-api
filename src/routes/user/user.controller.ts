@@ -1,13 +1,13 @@
 import { Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Query } from '@nestjs/common'
 import { UserService } from './user.service'
-import { Auth, IsPublic } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes } from 'src/shared/constants/auth.constant'
+import { Auth, IsPublic } from '../../shared/decorator/auth.decorator'
+import { AuthTypes } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
 import { PublicProfileResDTO, TeacherListQueryDTO, TeacherListResDTO } from './dto/user.dto'
 import { ApiTags, ApiOperation, ApiParam } from '@nestjs/swagger'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
 
 @ApiTags('User')
 @Controller('users')

@@ -9,14 +9,14 @@ import {
   UnfollowResDTO,
   UserIdParamDTO,
 } from './dto/follow.dto'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes } from 'src/shared/constants/auth.constant'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { AuthTypes } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import { ApiOperation, ApiParam, ApiTags, ApiQuery } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Follow')
 @Controller('teachers')

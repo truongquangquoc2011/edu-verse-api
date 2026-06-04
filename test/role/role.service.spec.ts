@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing'
-import { RoleService } from 'src/routes/role/role.service'
-import { RoleRepository } from 'src/routes/role/role.repo'
-import { RoleAlreadyExistsException, RoleNotFoundException } from 'src/routes/role/role.error'
-import { RoleMessages } from 'src/shared/constants/message.constant'
+import { RoleService } from '../../src/routes/role/role.service'
+import { RoleRepository } from '../../src/routes/role/role.repo'
+import { RoleAlreadyExistsException, RoleNotFoundException } from '../../src/routes/role/role.error'
+import { RoleMessages } from '../../src/shared/constants/message.constant'
 import { Prisma } from '@prisma/client'
 
 describe('RoleService', () => {

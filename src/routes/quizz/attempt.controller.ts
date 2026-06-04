@@ -1,9 +1,9 @@
-import { Auth } from 'src/shared/decorator/auth.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
 import { Body, Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Patch, Post, Query } from '@nestjs/common'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
+import { MessageResDTO } from '../../shared/dto/response.dto'
 
 import { QuizAttemptService } from './attempt.service'
 import { AttemptContext } from './attempt.repo'
@@ -19,9 +19,9 @@ import {
 
 import { QuizAttemptResponseSchema, QuizAttemptQuestionsResSchema, SaveQuizAnswerInputSchema } from './quiz.model'
 import { ApiBody, ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 @ApiTags('Quiz Attempt')
 @Auth([AuthTypes.BEARER, AuthTypes.APIKey], { condition: ConditionGuard.OR })
 @Controller('course/:courseId/modules/:moduleId/lessons/:lessonId/quizzes/:quizId/attempts')

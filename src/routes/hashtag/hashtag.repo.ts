@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { CreateHashtagBodyType, HashtagResponseType, UpdateHashtagBodyType } from './hashtag.model'
 import { HashtagAlreadyExistsException, HashtagNotFoundException } from './hashtag.error'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
 import { Prisma } from '@prisma/client'
 
 export const HASHTAG_DEFAULT_SELECT = {

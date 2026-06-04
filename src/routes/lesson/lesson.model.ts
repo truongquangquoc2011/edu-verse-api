@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { PaginationQuerySchema, PaginationResBaseSchema } from 'src/shared/models/pagination.model'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
+import { PaginationQuerySchema, PaginationResBaseSchema } from '../../shared/models/pagination.model'
 import { QuizStatus } from '@prisma/client'
 
 const LESSON_ERR = ERROR_MESSAGE.VALIDATION.LESSON

@@ -2,9 +2,9 @@ import { HttpException, Injectable, Logger } from '@nestjs/common'
 import { CreateFeedbackBodyType, GetAdminFeedbackQueryType, FeedbackResponseType } from './feedback.model'
 import { InternalCreateFeedbackErrorException, InternalDeleteFeedbackErrorException } from './feedback.error'
 import { FeedbackRepository } from './feedback.repo'
-import { EmailService } from 'src/shared/services/email.service'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { FeedbackType } from 'src/shared/constants/feedback.constant'
+import { EmailService } from '../../shared/services/email.service'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { FeedbackType } from '../../shared/constants/feedback.constant'
 
 @Injectable()
 export class FeedbackService {

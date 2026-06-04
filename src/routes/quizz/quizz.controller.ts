@@ -1,7 +1,7 @@
-import { Auth } from 'src/shared/decorator/auth.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Query } from '@nestjs/common'
 import { QuizzService } from './quizz.service'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import {
   CreateQuizDTO,
   CreateQuizResDTO,
@@ -26,13 +26,13 @@ import {
   ReorderQuizAnswerOptionDTO,
 } from './dto/quizz.dto'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { MessageResDTO } from '../../shared/dto/response.dto'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { QuizContext } from './quizz.repo'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
 import { ApiBody, ApiOperation, ApiTags, ApiParam } from '@nestjs/swagger'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Quiz Builder')
 @Controller('course/:courseId/builder/modules/:moduleId/lessons/:lessonId/quizzes')

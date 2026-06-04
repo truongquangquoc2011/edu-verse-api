@@ -1,7 +1,7 @@
 // import { Injectable } from '@nestjs/common'
 // import { Resend } from 'resend'
 // import { envConfig } from '../config'
-// import OTPEmail from 'emails/otp'
+// import OTPEmail from '../../../emails/otp'
 // import * as React from 'react'
 
 // @Injectable()

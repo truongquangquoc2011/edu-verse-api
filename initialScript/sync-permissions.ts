@@ -1,8 +1,8 @@
 import 'tsconfig-paths/register'
 import { NestFactory } from '@nestjs/core'
-import { AppModule } from 'src/app.module'
+import { AppModule } from '../src/app.module'
 import { DiscoveryService, MetadataScanner, DiscoveryModule } from '@nestjs/core'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../src/shared/services/prisma.service'
 import { Module } from '@nestjs/common'
 import path from 'path'
 

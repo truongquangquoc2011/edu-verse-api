@@ -1,4 +1,4 @@
-import { isUniqueConstraintPrismaError } from 'src/shared/helper'
+import { isUniqueConstraintPrismaError } from '../../shared/helper'
 import {
   InternalAssignPermissionsToRoleErrorException,
   InternalAssignRolesToUserErrorException,
@@ -22,9 +22,9 @@ import {
 import { RoleRepository } from './role.repo'
 import { ForbiddenException, HttpException, Injectable } from '@nestjs/common'
 import { Prisma } from '@prisma/client'
-import { RoleMessages } from 'src/shared/constants/message.constant'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
-import { RoleName } from 'src/shared/constants/role.constant'
+import { RoleMessages } from '../../shared/constants/message.constant'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
+import { RoleName } from '../../shared/constants/role.constant'
 
 @Injectable()
 export class RoleService {

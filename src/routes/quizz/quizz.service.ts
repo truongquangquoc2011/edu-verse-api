@@ -16,7 +16,7 @@ import {
   UpdateQuizAnswerOptionType,
   ReorderQuizAnswerOptionType,
 } from './quiz.model'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 
 @Injectable()
 export class QuizzService {

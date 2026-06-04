@@ -17,7 +17,7 @@ import {
   MessageTypeValue,
   ReactionAction,
   ReactionActionValue,
-} from 'src/shared/constants/conversation.constant'
+} from '../../shared/constants/conversation.constant'
 import { ConfigService } from '@nestjs/config'
 
 /**

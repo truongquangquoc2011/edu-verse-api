@@ -1,7 +1,7 @@
 import { DocumentBuilder, OpenAPIObject } from '@nestjs/swagger'
 import { Injectable } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
-import { envConfig } from 'src/shared/config'
+import { envConfig } from '../shared/config'
 
 export enum Environment {
   Development = 'development',

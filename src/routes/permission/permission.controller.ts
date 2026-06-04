@@ -1,9 +1,9 @@
 import { ZodSerializerDto } from 'nestjs-zod'
 import { Controller, Post, Body, HttpCode, HttpStatus, Patch, Param, Get, Query, Delete } from '@nestjs/common'
 import { PermissionService } from './permission.service'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes } from 'src/shared/constants/auth.constant'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { AuthTypes } from '../../shared/constants/auth.constant'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import {
   AssignRoleToPermissionDTO,
   AssignRoleToPermissionResDTO,
@@ -17,13 +17,13 @@ import {
   UpdatePermisionBodyDTO,
   UpdatePermisionResDTO,
 } from './dto/permission.dto'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
-import { RequireClientRole } from 'src/shared/decorator/role.decorator'
-import { RequirePerm } from 'src/shared/decorator/permissions.decorator'
+import { MessageResDTO } from '../../shared/dto/response.dto'
+import { RequireClientRole } from '../../shared/decorator/role.decorator'
+import { RequirePerm } from '../../shared/decorator/permissions.decorator'
 import { ApiTags, ApiBody, ApiOperation, ApiParam } from '@nestjs/swagger'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
 
 @ApiTags('Permission')
 @Controller('permission')

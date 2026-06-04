@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client'
-import { QuizContext } from 'src/routes/quizz/quizz.repo'
-import { QuizAnswerOptionNotFoundOrForbiddenException } from 'src/shared/constants/quiz-error.constant'
+import { QuizContext } from '../../routes/quizz/quizz.repo'
+import { QuizAnswerOptionNotFoundOrForbiddenException } from '../constants/quiz-error.constant'
 export const OPTION_SENTINEL_ORDER = 1_000_000_000
 /**
  * Gets current option or throws if not found/deleted.

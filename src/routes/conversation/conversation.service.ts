@@ -16,7 +16,7 @@ import {
 import { ConversationRepository } from './conversation.repo'
 import { ConversationGateway } from './conversation.gateway'
 import { ConversationType, MessageType } from '@prisma/client'
-import { JoinRequestStatus } from 'src/shared/constants/conversation.constant'
+import { JoinRequestStatus } from '../../shared/constants/conversation.constant'
 
 @Injectable()
 export class ConversationService {

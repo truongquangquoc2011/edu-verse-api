@@ -1,6 +1,6 @@
 import z from 'zod'
 import { RoleSchema } from '../auth/auth.model'
-import { PermissionSchema } from 'src/shared/models/shared-permission.model'
+import { PermissionSchema } from '../../shared/models/shared-permission.model'
 
 // === Role Response Schema ===
 export const RoleResponseSchema = RoleSchema.omit({

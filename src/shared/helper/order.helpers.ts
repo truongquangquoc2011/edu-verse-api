@@ -1,8 +1,8 @@
 import { OrderStatus } from '@prisma/client'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { MomoService } from 'src/shared/services/momo.service'
+import { PrismaService } from '../services/prisma.service'
+import { MomoService } from '../services/momo.service'
 import { BadRequestException, NotFoundException } from '@nestjs/common'
-import { PAYMENT_METHOD } from 'src/shared/constants/payment.constant'
+import { PAYMENT_METHOD } from '../constants/payment.constant'
 
 /** Minimal payload structure used to extract a payment reference */
 export type PaymentRefLike = { transId?: string | number; requestId?: string }

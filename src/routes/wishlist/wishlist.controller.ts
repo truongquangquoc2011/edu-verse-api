@@ -1,15 +1,15 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Query } from '@nestjs/common'
 import { ApiTags, ApiOperation, ApiParam, ApiBody } from '@nestjs/swagger'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 import { WishlistService } from './wishlist.service'
 import { AddWishlistDTO, AddWishlistResDTO, ListWishlistQueryDTO, ListWishlistResDTO } from './dto/wishlist.dto'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
+import { MessageResDTO } from '../../shared/dto/response.dto'
 
 @ApiTags('Wishlist')
 @Controller('wishlist')

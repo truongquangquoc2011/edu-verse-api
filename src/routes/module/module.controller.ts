@@ -1,4 +1,4 @@
-import { Auth } from 'src/shared/decorator/auth.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
 import {
   Body,
   Controller,
@@ -13,8 +13,8 @@ import {
   Query,
 } from '@nestjs/common'
 import { ModuleService } from './module.service'
-import { RequireSellerRole } from 'src/shared/decorator/role.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { RequireSellerRole } from '../../shared/decorator/role.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import {
   CreateModuleDTO,
   CreateModuleResDTO,
@@ -24,12 +24,12 @@ import {
   UpdateModuleResDTO,
 } from './dto/module.dto'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { MessageResDTO } from '../../shared/dto/response.dto'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { ApiOperation, ApiParam, ApiBody, ApiTags } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Module')
 @Controller('course/:courseId/builder/modules')

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { CartRepository } from './cart.repo'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 import { AddCartInputType, AddCartResType, ListCartResType } from './cart.model'
 
 @Injectable()

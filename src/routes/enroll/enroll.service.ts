@@ -5,10 +5,10 @@ import {
   UserInactiveException,
   UserNotFoundException,
 } from './enroll.error'
-import { UserStatus } from 'src/shared/constants/auth.constant'
-import { EmailService } from 'src/shared/services/email.service'
+import { UserStatus } from '../../shared/constants/auth.constant'
+import { EmailService } from '../../shared/services/email.service'
 import { EnrollRepository } from './enroll.repo'
-import { envConfig } from 'src/shared/config'
+import { envConfig } from '../../shared/config'
 import { EnrollmentType } from './enroll.model'
 
 type EnrollSource = 'purchase' | 'manual' | 'free'

@@ -1,7 +1,7 @@
 import { JwtService } from '@nestjs/jwt'
 import { UnauthorizedException } from '@nestjs/common'
 import { Socket } from 'socket.io'
-import { envConfig } from 'src/shared/config'
+import { envConfig } from '../../shared/config'
 import { ConfigService } from '@nestjs/config'
 
 export interface JwtPayload {

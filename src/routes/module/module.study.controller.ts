@@ -4,15 +4,15 @@ import { ZodSerializerDto } from 'nestjs-zod'
 
 import { ModuleService } from './module.service'
 
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { RequireSellerRole } from 'src/shared/decorator/role.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { RequireSellerRole } from '../../shared/decorator/role.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
 
 import { ListModuleQuizQueryDTO, ListModuleQuizResDTO, ListModuleStudyQueryDTO, ListModuleStudyResDTO } from './dto/module.dto'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Module - Study')
 @Controller('course/:courseId/modules')

@@ -1,6 +1,6 @@
 // src/shared/helper/module.helper.ts
 import { Prisma, PrismaClient } from '@prisma/client'
-import { ModuleStudyItemType } from 'src/routes/module/module.model'
+import { ModuleStudyItemType } from '../../routes/module/module.model'
 
 /**
  * Type helper: PrismaClient lẫn TransactionClient

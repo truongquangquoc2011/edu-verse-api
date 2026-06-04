@@ -1,12 +1,12 @@
 // src/modules/wishlist/wishlist.repo.ts
 import { Injectable, Logger, BadRequestException, ConflictException, NotFoundException } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { ValidationService } from 'src/shared/services/validation.service'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { ValidationService } from '../../shared/services/validation.service'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 import { Prisma } from '@prisma/client'
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library'
-import { COURSE_MINI_SELECT } from 'src/shared/helper/cart.helper'
-import { COURSE_STATUS } from 'src/shared/constants/course-field.constant' // ✅ thêm
+import { COURSE_MINI_SELECT } from '../../shared/helper/cart.helper'
+import { COURSE_STATUS } from '../../shared/constants/course-field.constant' // ✅ thêm
 
 import {
   AddWishlistInputType,
@@ -15,7 +15,7 @@ import {
   WishlistItemResponseType,
   WISHLIST_MAX_ITEMS_CONST,
 } from './wishlist.model'
-import { WISHLIST_MESSAGES } from 'src/shared/constants/wishlist-message.constant'
+import { WISHLIST_MESSAGES } from '../../shared/constants/wishlist-message.constant'
 
 /** ---- SELECT shape  ---- */
 const WISHLIST_ROW_SELECT = {

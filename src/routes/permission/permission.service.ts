@@ -9,7 +9,7 @@ import {
   PermissionWithRelationsType,
   UpdatePermissionBodyType,
 } from './permission.model'
-import { isNotFoundPrismaError, isUniqueConstraintPrismaError } from 'src/shared/helper'
+import { isNotFoundPrismaError, isUniqueConstraintPrismaError } from '../../shared/helper'
 import { PermissionRepository } from './permission.repo'
 import {
   AtLeastOneFieldMustBeProvidedException,

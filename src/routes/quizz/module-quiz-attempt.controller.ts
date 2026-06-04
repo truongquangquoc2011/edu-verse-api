@@ -1,7 +1,7 @@
-import { Auth } from 'src/shared/decorator/auth.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
 import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post } from '@nestjs/common'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
 
 import { QuizAttemptService } from './attempt.service'
@@ -21,9 +21,9 @@ import {
 } from './quiz.model'
 
 import { ApiBody, ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Module Quiz Attempt')
 @Auth([AuthTypes.BEARER, AuthTypes.APIKey], { condition: ConditionGuard.OR })

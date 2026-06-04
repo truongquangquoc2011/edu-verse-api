@@ -1,9 +1,9 @@
 import { Injectable, CanActivate, ExecutionContext, ForbiddenException } from '@nestjs/common'
 import { Reflector } from '@nestjs/core'
-import { RoleService } from 'src/routes/role/role.service'
-import { REQUEST_USER_KEY, AuthTypes } from 'src/shared/constants/auth.constant'
-import { PERMISSIONS_KEY, PERMISSION_MODE_KEY, PermissionMode } from 'src/shared/decorator/permissions.decorator'
-import { AUTH_TYPE_KEY, AuthTypeDecoratorPayload } from 'src/shared/decorator/auth.decorator'
+import { RoleService } from '../../routes/role/role.service'
+import { REQUEST_USER_KEY, AuthTypes } from '../constants/auth.constant'
+import { PERMISSIONS_KEY, PERMISSION_MODE_KEY, PermissionMode } from '../decorator/permissions.decorator'
+import { AUTH_TYPE_KEY, AuthTypeDecoratorPayload } from '../decorator/auth.decorator'
 import { ROLE_HIERARCHY } from '../constants/role-hierarchy.constant'
 
 @Injectable()

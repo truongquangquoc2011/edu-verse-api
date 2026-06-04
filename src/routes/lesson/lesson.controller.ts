@@ -1,4 +1,4 @@
-import { Auth } from 'src/shared/decorator/auth.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
 import {
   Body,
   Controller,
@@ -15,7 +15,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common'
 import { LessonService } from './lesson.service'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import {
   AddVideoLinkDTO,
   CreateLessonDTO,
@@ -27,16 +27,16 @@ import {
   UpdateLessonResDTO,
 } from './dto/lesson.dto'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { MessageResDTO } from '../../shared/dto/response.dto'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { FileInterceptor } from '@nestjs/platform-express'
-import { NoFileProvidedException } from 'src/shared/constants/file-error.constant'
-import { CloudinaryService } from 'src/shared/services/cloudinary.service'
-import { PdfUploadInterceptor } from 'src/interceptors/pdf-upload.interceptor'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
+import { NoFileProvidedException } from '../../shared/constants/file-error.constant'
+import { CloudinaryService } from '../../shared/services/cloudinary.service'
+import { PdfUploadInterceptor } from '../../interceptors/pdf-upload.interceptor'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
 import { ApiBody, ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Lesson')
 @Controller('course/:courseId/builder/modules/:moduleId/lessons')

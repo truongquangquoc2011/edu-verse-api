@@ -1,9 +1,9 @@
 import { Body, Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Query } from '@nestjs/common'
 import { ApiBody, ApiOperation, ApiParam, ApiTags, ApiProperty } from '@nestjs/swagger'
-import { IsPublic } from 'src/shared/decorator/auth.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
+import { IsPublic } from '../../shared/decorator/auth.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
 import { ChatbotService } from './chatbot.service'
 
 class ChatbotChatBodyDTO {

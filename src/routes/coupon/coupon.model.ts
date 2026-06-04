@@ -1,4 +1,4 @@
-import { CouponDiscount } from 'src/shared/constants/coupon.constant'
+import { CouponDiscount } from '../../shared/constants/coupon.constant'
 import z from 'zod'
 
 const MAX_CODE_LENGTH = 8

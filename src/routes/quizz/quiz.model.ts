@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { PaginationQuerySchema, PaginationResBaseSchema } from 'src/shared/models/pagination.model'
+import { PaginationQuerySchema, PaginationResBaseSchema } from '../../shared/models/pagination.model'
 // Constants configurable
 const TITLE_MIN_LENGTH = 1
 const TITLE_MAX_LENGTH = 255

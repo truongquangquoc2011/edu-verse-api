@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { createZodDto } from 'nestjs-zod'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
 
 // Error aliases
 const COMMON_ERR = ERROR_MESSAGE.VALIDATION.COMMON

@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing'
-import { LessonRepository } from 'src/routes/lesson/lesson.repo'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { ValidationService } from 'src/shared/services/validation.service'
+import { LessonRepository } from '../../src/routes/lesson/lesson.repo'
+import { PrismaService } from '../../src/shared/services/prisma.service'
+import { ValidationService } from '../../src/shared/services/validation.service'
 import {
   DuplicateTitlesException,
   LessonNotFoundOrForbiddenException,
   ModuleNotFoundOrForbiddenException,
-} from 'src/shared/constants/lesson-error.constant'
+} from '../../src/shared/constants/lesson-error.constant'
 
 describe('LessonRepository', () => {
   let repo: LessonRepository

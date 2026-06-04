@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
 import { ElasticsearchModule } from '@nestjs/elasticsearch'
 import { SearchService } from './search.service'
-import { envConfig } from 'src/shared/config'
+import { envConfig } from '../../shared/config'
 
 @Module({
   imports: [

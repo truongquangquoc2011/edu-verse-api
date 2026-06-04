@@ -1,5 +1,5 @@
 import { BadRequestException, Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { CourseStatus, Prisma } from '@prisma/client'
 import {
   CreateCourseType,
@@ -18,8 +18,8 @@ import {
   CourseStudyResType,
   PublicCourseDetailType,
 } from './course.model'
-import { ID_SELECT } from 'src/shared/constants/auth.constant'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
+import { ID_SELECT } from '../../shared/constants/auth.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
 import {
   buildCourseData,
   buildUpdateCourseData,
@@ -30,12 +30,12 @@ import {
   getCoursePublicRaw,
   getCourseRaw,
 } from '../../shared/helper/course.helper'
-import { ValidationService } from 'src/shared/services/validation.service'
-import { CourseBasicInfo } from 'src/shared/@types/course.type'
-import { COURSE_BASIC_SELECT } from 'src/shared/constants/constants'
-import { COURSE_DETAIL_SELECT, COURSE_PUBLIC_DETAIL_SELECT } from 'src/shared/constants/course-field.constant'
+import { ValidationService } from '../../shared/services/validation.service'
+import { CourseBasicInfo } from '../../shared/@types/course.type'
+import { COURSE_BASIC_SELECT } from '../../shared/constants/constants'
+import { COURSE_DETAIL_SELECT, COURSE_PUBLIC_DETAIL_SELECT } from '../../shared/constants/course-field.constant'
 import { toNumber } from '../../shared/utils/decimal.util'
-import { CourseNotFoundOrForbiddenException } from 'src/shared/constants/course-error.constant'
+import { CourseNotFoundOrForbiddenException } from '../../shared/constants/course-error.constant'
 const idSelect = { id: true }
 @Injectable()
 export class CourseRepository {

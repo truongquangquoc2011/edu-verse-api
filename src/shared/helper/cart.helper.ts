@@ -1,6 +1,6 @@
 import { NotFoundException } from '@nestjs/common'
 import { Cart, Course, Teacher, User, PrismaClient, CouponDiscountType } from '@prisma/client'
-import { CartCourseMiniType } from 'src/routes/cart/cart.model'
+import { CartCourseMiniType } from '../../routes/cart/cart.model'
 import { CART_MESSAGES } from '../constants/cart-message.constant'
 type DiscountKind = 'PERCENT' | 'AMOUNT'
 /**

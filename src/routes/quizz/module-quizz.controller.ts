@@ -1,9 +1,9 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Query } from '@nestjs/common'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
+import { MessageResDTO } from '../../shared/dto/response.dto'
 import { QuizzService } from './quizz.service'
 import {
   // Quiz (module-level)

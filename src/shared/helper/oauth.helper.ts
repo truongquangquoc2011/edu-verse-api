@@ -1,4 +1,4 @@
-import { AuthStateType } from 'src/routes/auth/auth.model'
+import { AuthStateType } from '../../routes/auth/auth.model'
 import { DEFAULT_OAUTH_VALUES } from '../constants/oauth.constant'
 import { QUERY_PARAMS } from '../constants/constants'
 

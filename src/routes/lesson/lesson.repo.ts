@@ -1,8 +1,8 @@
 import { BadRequestException, Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { ValidationService } from 'src/shared/services/validation.service'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { ValidationService } from '../../shared/services/validation.service'
 import { Prisma } from '@prisma/client'
-import { LESSON_MESSAGES } from 'src/shared/constants/lesson-message.constant'
+import { LESSON_MESSAGES } from '../../shared/constants/lesson-message.constant'
 import {
   CreateLessonResType,
   CreateLessonType,
@@ -14,15 +14,15 @@ import {
   ListLessonsStudyResType,
   LessonStudyDetailType,
 } from './lesson.model'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 import {
   DuplicateTitlesException,
   LessonNotFoundOrForbiddenException,
   ModuleNotFoundOrForbiddenException,
-} from 'src/shared/constants/lesson-error.constant'
-import { LESSON_PUBLIC_SELECT } from 'src/shared/constants/lesson.select'
+} from '../../shared/constants/lesson-error.constant'
+import { LESSON_PUBLIC_SELECT } from '../../shared/constants/lesson.select'
 import { Logger } from '@nestjs/common'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
 import { QuizStatus } from '@prisma/client'
 import {
   ListLessonQuizQueryType,

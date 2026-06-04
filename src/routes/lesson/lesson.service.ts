@@ -12,8 +12,8 @@ import {
   ListLessonQuizQueryType,
   ListLessonQuizResType,
 } from './lesson.model'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
-import { CloudinaryService } from 'src/shared/services/cloudinary.service'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
+import { CloudinaryService } from '../../shared/services/cloudinary.service'
 
 @Injectable()
 export class LessonService {

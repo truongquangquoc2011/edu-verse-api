@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { Follower } from '@prisma/client'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 
 export type FollowOpResult = {
   follow: Pick<Follower, 'id'>

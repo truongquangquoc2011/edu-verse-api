@@ -1,6 +1,6 @@
 import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Patch, Delete, Query, Put } from '@nestjs/common'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import {
   AssignPermissionToRoleDTO,
   AssignPermissionToRoleResDTO,
@@ -12,15 +12,15 @@ import {
   UpdateRoleBodyDTO,
 } from './dto/role.dto'
 import { RoleService } from './role.service'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
-import { Auth } from 'src/shared/decorator/auth.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
+import { Auth } from '../../shared/decorator/auth.decorator'
 import { MessageResDTO } from '../auth/dto/auth.dto'
-import { RequireAdminRole, RequireSellerRole } from 'src/shared/decorator/role.decorator'
-import { parseSkipTake } from 'src/shared/utils/pagination.util'
+import { RequireAdminRole, RequireSellerRole } from '../../shared/decorator/role.decorator'
+import { parseSkipTake } from '../../shared/utils/pagination.util'
 import { ApiBody, ApiOperation, ApiTags, ApiParam, ApiQuery } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Role')
 @Controller('role')

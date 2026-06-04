@@ -16,8 +16,8 @@ import {
   CourseStudyResType,
   PublicCourseDetailType,
 } from './course.model'
-import { ERROR_MESSAGE } from 'src/shared/constants/error-message.constant'
-import { MESSAGES } from 'src/shared/constants/succes-message.constant'
+import { ERROR_MESSAGE } from '../../shared/constants/error-message.constant'
+import { MESSAGES } from '../../shared/constants/succes-message.constant'
 import { CourseSearchService } from './course.search.service'
 @Injectable()
 export class CourseService {

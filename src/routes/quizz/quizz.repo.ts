@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { ValidationService } from 'src/shared/services/validation.service'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { ValidationService } from '../../shared/services/validation.service'
 import { Prisma } from '@prisma/client'
 import {
   CreateQuizType,
@@ -18,18 +18,18 @@ import {
   UpdateQuizAnswerOptionType,
   ReorderQuizAnswerOptionType,
 } from './quiz.model'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
-import { LessonNotFoundOrForbiddenException } from 'src/shared/constants/lesson-error.constant'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
+import { LessonNotFoundOrForbiddenException } from '../../shared/constants/lesson-error.constant'
 import {
   QuizAnswerOptionNotFoundOrForbiddenException,
   QuizNotFoundOrForbiddenException,
   QuizQuestionNotFoundOrForbiddenException,
-} from 'src/shared/constants/quiz-error.constant'
-import { QUIZ_ANSWER_OPTION_MESSAGES, QUIZ_MESSAGES } from 'src/shared/constants/quiz-message.constant'
-import { QUIZ_PUBLIC_SELECT, QUIZ_QUESTION_PUBLIC_SELECT } from 'src/shared/constants/quiz.select'
+} from '../../shared/constants/quiz-error.constant'
+import { QUIZ_ANSWER_OPTION_MESSAGES, QUIZ_MESSAGES } from '../../shared/constants/quiz-message.constant'
+import { QUIZ_PUBLIC_SELECT, QUIZ_QUESTION_PUBLIC_SELECT } from '../../shared/constants/quiz.select'
 
-import { QUIZ_QUESTION_MESSAGES } from 'src/shared/constants/quiz-question-success.constant'
-import { QuizQuestionNotFoundException } from 'src/shared/constants/quiz-question-error.constant'
+import { QUIZ_QUESTION_MESSAGES } from '../../shared/constants/quiz-question-success.constant'
+import { QuizQuestionNotFoundException } from '../../shared/constants/quiz-question-error.constant'
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library'
 import {
   getCurrentOptionOrThrow,

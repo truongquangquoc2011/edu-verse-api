@@ -1,19 +1,19 @@
 import { Injectable, Logger } from '@nestjs/common'
 import { Prisma } from '@prisma/client'
-import { PrismaService } from 'src/shared/services/prisma.service'
-import { ValidationService } from 'src/shared/services/validation.service'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PrismaService } from '../../shared/services/prisma.service'
+import { ValidationService } from '../../shared/services/validation.service'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 
-import { LessonNotFoundOrForbiddenException } from 'src/shared/constants/lesson-error.constant'
+import { LessonNotFoundOrForbiddenException } from '../../shared/constants/lesson-error.constant'
 import {
   QuizNotFoundOrForbiddenException,
   QuizQuestionNotFoundOrForbiddenException,
-} from 'src/shared/constants/quiz-error.constant'
+} from '../../shared/constants/quiz-error.constant'
 import {
   QuizAttemptNotFoundOrForbiddenException,
   QuizAttemptAlreadySubmittedException,
   QuizAnswerInvalidException,
-} from 'src/shared/constants/quiz-attempt-error.constant'
+} from '../../shared/constants/quiz-attempt-error.constant'
 
 import {
   QuizAttemptQuestionsResType,

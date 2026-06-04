@@ -1,5 +1,5 @@
 import { HTTPMethod } from '@prisma/client'
-import { PermissionSchema } from 'src/shared/models/shared-permission.model'
+import { PermissionSchema } from '../../shared/models/shared-permission.model'
 import z from 'zod'
 import { RoleSchema } from '../auth/auth.model'
 

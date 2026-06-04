@@ -1,10 +1,10 @@
 import { BadRequestException, Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { PublicProfileResType, TeacherListQueryType, TeacherListResType, TeacherPublicItem } from './user.model'
 
-import { PUBLIC_PROFILE_FIELDS, PublicField } from 'src/shared/constants/user.constant'
-import { UserStatus } from 'src/shared/constants/auth.constant'
-import { RoleName } from 'src/shared/constants/role.constant'
+import { PUBLIC_PROFILE_FIELDS, PublicField } from '../../shared/constants/user.constant'
+import { UserStatus } from '../../shared/constants/auth.constant'
+import { RoleName } from '../../shared/constants/role.constant'
 import { UserNotFoundException } from './user.error'
 
 @Injectable()

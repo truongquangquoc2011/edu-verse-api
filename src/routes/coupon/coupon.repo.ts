@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { CouponResponseType, CreateCouponBodyType, UpdateCouponBodyType } from './coupon.model'
 import { Prisma } from '@prisma/client'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
 import { CouponNotFoundException } from './coupon.error'
-import { CODE_CHARS, DEFAULT_LENGTH, MAX_ATTEMPTS } from 'src/shared/config'
+import { CODE_CHARS, DEFAULT_LENGTH, MAX_ATTEMPTS } from '../../shared/config'
 export const COUPON_DEFAULT_SELECT = {
   id: true,
   code: true,

@@ -1,4 +1,4 @@
-import { PaginationQuerySchema, PaginationResBaseSchema } from 'src/shared/models/pagination.model'
+import { PaginationQuerySchema, PaginationResBaseSchema } from '../../shared/models/pagination.model'
 import z from 'zod'
 
 export const PublicProfileSchema = z.object({

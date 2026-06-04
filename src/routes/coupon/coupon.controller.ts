@@ -12,17 +12,17 @@ import {
   HttpCode,
 } from '@nestjs/common'
 import { CouponService } from './coupon.service'
-import { Auth, IsPublic } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes } from 'src/shared/constants/auth.constant'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { Auth, IsPublic } from '../../shared/decorator/auth.decorator'
+import { AuthTypes } from '../../shared/constants/auth.constant'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import { ZodSerializerDto } from 'nestjs-zod'
 import { CreateCouponDTO, CreateCouponResDTO, UpdateCouponDTO, UpdateCouponResDTO } from './dto/coupon.dto'
 import { CreateCouponBodyType, UpdateCouponBodyType } from './coupon.model'
-import { parseSkipTake } from 'src/shared/utils/pagination.util'
+import { parseSkipTake } from '../../shared/utils/pagination.util'
 import { ApiTags, ApiBody, ApiOperation, ApiParam, ApiQuery } from '@nestjs/swagger'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
 @ApiTags('Coupon')
 @Controller('coupon')
 export class CouponController {

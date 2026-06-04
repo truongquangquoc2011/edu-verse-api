@@ -1,6 +1,6 @@
 import { createZodDto } from "nestjs-zod";
 import { AssignRoleToPermissionResSchema, AssignRoleToPermissionSchema, CreatePermissionBodySchema, CreatePermissionResSchema, GetPermissionDetailSchema, GetPermissionQuerySchema, getPermissionResSchema, GetPermissionsResSchema, UpdatePermissionBodySchema, UpdatePermissionResSchema } from "../permission.model";
-import { PermissionIdParamSchema } from "src/shared/models/shared-permission.model";
+import { PermissionIdParamSchema } from "../../../shared/models/shared-permission.model";
 
 export class CreatePermisionResDTO extends createZodDto(CreatePermissionResSchema){}
 

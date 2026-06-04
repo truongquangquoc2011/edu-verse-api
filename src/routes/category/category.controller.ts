@@ -12,8 +12,8 @@ import {
   HttpCode,
 } from '@nestjs/common'
 import { CategoryService } from './category.service'
-import { Auth, IsPublic } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes } from 'src/shared/constants/auth.constant'
+import { Auth, IsPublic } from '../../shared/decorator/auth.decorator'
+import { AuthTypes } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
 import {
   CategoryResDTO,
@@ -22,12 +22,12 @@ import {
   ListCategoryFilterDTO,
   UpdateCategoryDTO,
 } from './dto/category.dto'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { parseSkipTake } from 'src/shared/utils/pagination.util'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { parseSkipTake } from '../../shared/utils/pagination.util'
 import { ApiTags, ApiOperation, ApiParam, ApiQuery, ApiResponse, ApiBody } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Category')
 @Controller('category')

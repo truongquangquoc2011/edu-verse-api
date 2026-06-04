@@ -8,9 +8,9 @@ import {
   InternalUpdateCouponErrorException,
 } from './coupon.error'
 import { CouponRepository } from './coupon.repo'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import { error } from 'console'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
 import { CreateCouponDTO } from './dto/coupon.dto'
 
 @Injectable()

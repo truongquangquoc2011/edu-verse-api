@@ -1,6 +1,6 @@
 import { Inject, Injectable, Logger, NotFoundException } from '@nestjs/common'
 import { RoleType } from '../auth/auth.model'
-import { PrismaService } from 'src/shared/services/prisma.service'
+import { PrismaService } from '../../shared/services/prisma.service'
 import {
   CreateRoleBodyType,
   RoleWithPermissionsType,
@@ -10,7 +10,7 @@ import {
 } from './role.model'
 import { Permission, Prisma } from '@prisma/client'
 import { RoleNotFoundException } from './role.error'
-import { PAGINATION } from 'src/shared/constants/pagination.constant'
+import { PAGINATION } from '../../shared/constants/pagination.constant'
 import { CACHE_MANAGER } from '@nestjs/cache-manager'
 import type { Cache } from 'cache-manager'
 export const ROLE_DEFAULT_SELECT = {

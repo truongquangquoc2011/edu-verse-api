@@ -12,16 +12,16 @@ import {
   HttpStatus,
 } from '@nestjs/common'
 import { HashtagService } from './hashtag.service'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes } from 'src/shared/constants/auth.constant'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { AuthTypes } from '../../shared/constants/auth.constant'
 import { ZodSerializerDto } from 'nestjs-zod'
 import { CreateHashtagDTO, GetHashtagsResDTO, HashtagResDTO, UpdateHashtagDTO } from './dto/hashtag.dto'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { parseSkipTake } from 'src/shared/utils/pagination.util'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { parseSkipTake } from '../../shared/utils/pagination.util'
 import { ApiBody, ApiOperation, ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Hashtag')
 @Controller('hashtag')

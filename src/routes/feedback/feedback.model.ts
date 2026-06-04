@@ -1,4 +1,4 @@
-import { FeedbackStatus, FeedbackType } from 'src/shared/constants/feedback.constant'
+import { FeedbackStatus, FeedbackType } from '../../shared/constants/feedback.constant'
 import z from 'zod'
 
 const TITLE_MIN_LENGTH = 1

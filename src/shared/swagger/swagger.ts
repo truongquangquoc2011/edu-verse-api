@@ -4,7 +4,7 @@ import expressBasicAuth from 'express-basic-auth'
 import { ConfigGroups } from '../config'
 import { patchNestJsSwagger } from 'nestjs-zod'
 import { ConfigService } from '@nestjs/config'
-import { SwaggerConfigService } from 'src/config/swagger.config'
+import { SwaggerConfigService } from '../../config/swagger.config'
 
 export function setupSwagger(app: INestApplication) {
   const { username, password } = ConfigGroups.swagger

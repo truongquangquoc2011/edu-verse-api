@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { WishlistRepository } from './wishlist.repo'
-import { PaginationQueryType } from 'src/shared/models/pagination.model'
+import { PaginationQueryType } from '../../shared/models/pagination.model'
 import { AddWishlistInputType, AddWishlistResType, ListWishlistResType } from './wishlist.model'
 
 @Injectable()

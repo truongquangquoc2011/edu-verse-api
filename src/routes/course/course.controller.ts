@@ -22,14 +22,14 @@ import {
 } from './dto/course.dto'
 import { CreateCourseResType, UpdateCourseResType } from './course.model'
 import { RequireAdminRole, RequireSellerRole } from '../../shared/decorator/role.decorator'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes, ConditionGuard } from 'src/shared/constants/auth.constant'
-import { MessageResDTO } from 'src/shared/dto/response.dto'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { AuthTypes, ConditionGuard } from '../../shared/constants/auth.constant'
+import { MessageResDTO } from '../../shared/dto/response.dto'
 import { ApiBody, ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Course')
 @Controller('course')

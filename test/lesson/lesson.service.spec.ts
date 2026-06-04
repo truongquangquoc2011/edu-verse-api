@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing'
-import { LessonService } from 'src/routes/lesson/lesson.service'
-import { LessonRepository } from 'src/routes/lesson/lesson.repo'
+import { LessonService } from '../../src/routes/lesson/lesson.service'
+import { LessonRepository } from '../../src/routes/lesson/lesson.repo'
 
 describe('LessonService', () => {
   let service: LessonService

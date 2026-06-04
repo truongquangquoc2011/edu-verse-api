@@ -1,14 +1,14 @@
 import { Controller, Post, Body, HttpCode, HttpStatus } from '@nestjs/common'
 import { EnrollService } from './enroll.service'
-import { ActiveUser } from 'src/shared/decorator/active-user.decorator'
+import { ActiveUser } from '../../shared/decorator/active-user.decorator'
 import { ZodSerializerDto } from 'nestjs-zod'
-import { Auth } from 'src/shared/decorator/auth.decorator'
-import { AuthTypes } from 'src/shared/constants/auth.constant'
+import { Auth } from '../../shared/decorator/auth.decorator'
+import { AuthTypes } from '../../shared/constants/auth.constant'
 import { CreateEnrollmentBodyDTO, CreateEnrollmentResDTO } from './dto/enroll.dto'
 import { ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger'
-import { ApiStandardResponses } from 'src/shared/decorator/api-standard-response'
-import { HttpStatusCode } from 'src/shared/swagger/swagger.interface'
-import { RESPONSE_MESSAGES } from 'src/shared/constants/swagger.constant'
+import { ApiStandardResponses } from '../../shared/decorator/api-standard-response'
+import { HttpStatusCode } from '../../shared/swagger/swagger.interface'
+import { RESPONSE_MESSAGES } from '../../shared/constants/swagger.constant'
 
 @ApiTags('Enrollment')
 @Controller('enroll')
