@@ -29,7 +29,7 @@ import {
   formatCourse,
   getCoursePublicRaw,
   getCourseRaw,
-} from 'src/shared/helper/course.helper'
+} from '../../shared/helper/course.helper'
 import { ValidationService } from 'src/shared/services/validation.service'
 import { CourseBasicInfo } from 'src/shared/@types/course.type'
 import { COURSE_BASIC_SELECT } from 'src/shared/constants/constants'
