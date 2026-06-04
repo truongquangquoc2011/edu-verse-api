@@ -25,6 +25,7 @@
       "@repositories/*": ["src/repositories/*"]
     }
   },
+  "include": ["src/**/*", "emails/**/*"],
   "ts-node": {
     "require": ["tsconfig-paths/register"]
   }

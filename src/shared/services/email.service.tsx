@@ -25,7 +25,7 @@ import { Injectable } from '@nestjs/common'
 import * as nodemailer from 'nodemailer'
 import { envConfig } from '../config'
 import { render } from '@react-email/components'
-import OTPEmail from 'emails/otp'
+import OTPEmail from '../../../emails/otp'
 import React from 'react'
 
 @Injectable()
