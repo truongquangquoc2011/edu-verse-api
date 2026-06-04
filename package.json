@@ -12,7 +12,7 @@
     "email:dev": "email dev",
     "email:build": "email build",
     "email:export": "email export",
-    "build": "nest build",
+    "build": "prisma generate && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "set NODE_OPTIONS=--max-old-space-size=4096 && nest start --watch",
