@@ -12,7 +12,7 @@
     "email:dev": "email dev",
     "email:build": "email build",
     "email:export": "email export",
-    "build": "prisma generate && nest build",
+    "build": "prisma generate && nest build && npx tsc-alias",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "set NODE_OPTIONS=--max-old-space-size=4096 && nest start --watch",
@@ -65,9 +65,10 @@
     "rxjs": "^7.8.1",
     "socket.io": "^4.8.1",
     "swagger-ui-express": "^5.0.1",
+    "tsc-alias": "^1.8.17",
+    "tsconfig-paths": "^4.2.0",
     "uuid": "^11.1.0",
-    "zod": "^3.25.74",
-    "tsconfig-paths": "^4.2.0"
+    "zod": "^3.25.74"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
