@@ -13,11 +13,17 @@ export enum Environment {
 }
 
 // Load .env file
+
 const ENV_PATH = path.resolve('.env')
-if (process.env.NODE_ENV !== Environment.Production) {
+
+const isVercel = !!process.env.VERCEL
+const isProduction = process.env.NODE_ENV === Environment.Production
+
+if (!isProduction && !isVercel) {
   if (!fs.existsSync(ENV_PATH)) {
     throw new Error(`Missing .env at ${ENV_PATH} (local dev)`)
   }
+
   loadDotenv({ path: ENV_PATH })
 }
 
